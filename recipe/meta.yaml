@@ -1,5 +1,5 @@
 {% set name = "laptrack" %}
-{% set version = "0.14.0" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/laptrack-{{ version }}.tar.gz
-  sha256: 157a9a97d56dd57f6bb694ebd40f85c5adfc6b7136f4161b75a197920d3399d3
+  sha256: 910fbcc1b06e015d4785e0424f233c69462c76f2370491ff83c843ee9bcea98f
 
 build:
   entry_points:
