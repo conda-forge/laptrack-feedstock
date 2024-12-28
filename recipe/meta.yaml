@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/laptrack-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/laptrack-{{ version }}.tar.gz
   sha256: a35be5833ad798ef5577ac0b77267df5c4db02be4ce1f7b15c6bf9c93b18f96f
 
 build:
@@ -14,16 +14,16 @@ build:
     - laptrack = laptrack.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - poetry-core
-    - python >=3.8,<3.12
+    - python {{ python_min }}
   run:
     - click >=8.0.1,<9.0.0
-    - python >=3.8,<3.12
+    - python >={{ python_min }},<3.12
     - networkx >=2.6.1,<3.0.0
     - numpy >=1.21.0,<2.0.0
     - pandas >=1.3.1,<2.0.0
@@ -43,6 +43,7 @@ test:
     - laptrack --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/yfukai/laptrack
