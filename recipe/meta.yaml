@@ -43,7 +43,7 @@ test:
     - pip check
     - laptrack --help
   requires:
-    - python {{ python_min }}
+    - python 3.12
     - pip
 
 about:
