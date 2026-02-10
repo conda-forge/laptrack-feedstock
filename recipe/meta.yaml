@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "laptrack" %}
-{% set version = "0.17.0" %}
+{% set version = "0.17.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/laptrack-{{ version }}.tar.gz
-  sha256: b72e73b6ce985d042647970bc965fac99166c9e203e38aa65410d86557579a06
+  sha256: 883330e5cda46343fc6581434161950669cda0f2fce33aac06440ebd2444aa00
 
 build:
   entry_points:
     - laptrack = laptrack.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
