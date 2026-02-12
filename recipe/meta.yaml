@@ -24,7 +24,6 @@ requirements:
     - python >=3.10,<3.15
   run:
     - click >=8.0.1,<9.0.0
-    - click >=8.0.1
     - python >={{ python_min }},<3.15
     - networkx >=3.4.2,<4.0.0
     - numpy >=1.26,<3.0.0
